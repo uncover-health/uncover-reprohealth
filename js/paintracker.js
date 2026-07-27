@@ -1,5 +1,5 @@
 // Builds a plain-text pain summary from the pain-map table + impact/relief
-// checklists on students.html — nothing here is sent or stored anywhere.
+// checklists on students.html, nothing here is sent or stored anywhere.
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('pain-generate');
   if (!btn) return;
@@ -28,7 +28,7 @@ ${impact.length ? impact.map(i => `- ${i}`).join('\n') : '- Nothing marked yet'}
 What helps:
 ${relief.length ? relief.map(r => `- ${r}`).join('\n') : '- Nothing marked yet'}
 
-Built with Uncover's pain tracker — this is not a diagnosis, just notes for a doctor's visit.`;
+Built with Uncover's pain tracker, this is not a diagnosis, just notes for a doctor's visit.`;
 
     summaryEl.innerHTML = `
       <p class="pain-summary-text">${summary.replace(/</g, '&lt;')}</p>

@@ -1,5 +1,5 @@
 /* =========================================================
-   Uncover — design system
+   Uncover, design system
    Inspired by helloupdigital.com's bold, numbered, card-driven
    structure; palette + type re-tuned for a teen health-ed audience.
    ========================================================= */
@@ -8,23 +8,23 @@
 
 :root{
   /* ---- Uncover palette (per project design spec) ---- */
-  --bg:            #3D1472;  /* Persian Indigo — dark contexts: nav, footer, hero, main dark colour */
+  --bg:            #3D1472;  /* Persian Indigo, dark contexts: nav, footer, hero, main dark colour */
   --bg-soft:       #4F2A8C;
   --bg-softer:     #61399E;
-  --canvas:        #F4F7EA;  /* Ivory — main background colour */
-  --paper:         #FEC4C6;  /* Blush Rose — card surface (kept distinct from Ivory canvas) */
-  --paper-dim:     #FBD9D3;  /* lighter blush — secondary card / pill bg */
-  --ink:           #3D1472;  /* Persian Indigo — body text; every palette colour but Indigo itself is light/medium, so text stays Indigo except on true-dark backgrounds */
-  --ink-soft:      #4A3178;  /* slightly softened Indigo — secondary text, still high-contrast */
-  --white:         #F4F7EA;  /* Ivory — text on dark (Indigo) backgrounds */
+  --canvas:        #F4F7EA;  /* Ivory, main background colour */
+  --paper:         #FEC4C6;  /* Blush Rose, card surface (kept distinct from Ivory canvas) */
+  --paper-dim:     #FBD9D3;  /* lighter blush, secondary card / pill bg */
+  --ink:           #3D1472;  /* Persian Indigo, body text; every palette colour but Indigo itself is light/medium, so text stays Indigo except on true-dark backgrounds */
+  --ink-soft:      #4A3178;  /* slightly softened Indigo, secondary text, still high-contrast */
+  --white:         #F4F7EA;  /* Ivory, text on dark (Indigo) backgrounds */
 
-  --primary:       #9580D4;  /* Soft Periwinkle — primary brand colour: buttons, links, headings */
+  --primary:       #9580D4;  /* Soft Periwinkle, primary brand colour: buttons, links, headings */
   --primary-dark:  #6B4FAE;
-  --secondary:     #75ADC9;  /* Sky Reflection — secondary brand colour */
-  --feature:       #E8A2F5;  /* Lavender Orchid — feature colour: stories, testimonials, quotes */
-  --highlight:     #FEC4C6;  /* Blush Rose — highlight colour: parent hub, reminders, success */
-  --wellness:      #6EB7CC;  /* Sea Glass — wellness accent: mental health, self-care */
-  --cta:           #FFDDBD;  /* Fairy Lights — accent: badges, quiz scores, did-you-know, used sparingly */
+  --secondary:     #75ADC9;  /* Sky Reflection, secondary brand colour */
+  --feature:       #E8A2F5;  /* Lavender Orchid, feature colour: stories, testimonials, quotes */
+  --highlight:     #FEC4C6;  /* Blush Rose, highlight colour: parent hub, reminders, success */
+  --wellness:      #6EB7CC;  /* Sea Glass, wellness accent: mental health, self-care */
+  --cta:           #FFDDBD;  /* Fairy Lights, accent: badges, quiz scores, did-you-know, used sparingly */
   --cta-ink:       #3D1472;
 
   /* legacy aliases (existing markup references these class/var names) */
@@ -37,7 +37,7 @@
   --purple:        var(--primary);
   --purple-soft:   #F1E4FB;
 
-  --muted:         #C4B8E8;  /* light periwinkle-lavender — secondary text on dark bg */
+  --muted:         #C4B8E8;  /* light periwinkle-lavender, secondary text on dark bg */
   --line:          rgba(244,247,234,0.28);   /* ivory-tinted border, dark contexts */
   --line-dark:     rgba(61,20,114,0.18);     /* indigo-tinted border, light contexts */
 
@@ -463,18 +463,29 @@ footer{
 .modal-box p{ line-height:1.6; }
 
 /* ---------- module reader (Teachers: click a module card to read it) ---------- */
-.module-card{ cursor:pointer; display:flex; flex-direction:column; }
+.module-card{ position:relative; cursor:pointer; display:flex; flex-direction:column; }
 .module-card .module-open{
   margin-top:auto; padding-top:16px;
   font-family:var(--font-body); font-weight:600; font-size:0.85rem;
   color:var(--primary-dark); letter-spacing:0.01em;
 }
 .section.light .module-card:hover .module-open{ color:var(--primary-dark); }
-.module-card:focus-visible{ outline:2px solid var(--primary); outline-offset:3px; }
+
+/* Transparent native button covering the whole card: real buttons fire click
+   on the first tap on every device (iPad desktop-mode included). */
+.card-cover{
+  position:absolute; inset:0; width:100%; height:100%;
+  margin:0; padding:0; border:0; background:transparent;
+  border-radius:inherit; cursor:pointer; z-index:2;
+  -webkit-appearance:none; appearance:none;
+  touch-action:manipulation;
+}
+.card-cover:focus-visible{ outline:2px solid var(--primary); outline-offset:3px; border-radius:var(--radius); }
 
 .module-reader .mod-box{
   max-width:760px;
   max-height:calc(100vh - 48px);
+  max-height:calc(100dvh - 48px);
   padding:0;
   display:flex; flex-direction:column;
   overflow:hidden;
@@ -503,7 +514,10 @@ footer{
 .mod-head .mod-eyebrow[hidden]{ display:none; }
 .mod-head .mod-num[hidden]{ display:none; }
 .mod-head .mod-title{ font-size:1.6rem; margin:0; line-height:1.15; }
-.mod-scroll{ overflow-y:auto; padding:26px 44px 44px; }
+.mod-scroll{
+  overflow-y:auto; padding:26px 44px 44px;
+  -webkit-overflow-scrolling:touch; overscroll-behavior:contain;
+}
 
 .mod-scroll .mod-meta{
   display:flex; flex-wrap:wrap; gap:10px; margin-bottom:8px;
@@ -543,7 +557,7 @@ footer{
   top:0; left:0; font-weight:700; color:var(--primary-dark); font-size:0.9rem;
 }
 
-/* Say This — facilitator quote */
+/* Say This, facilitator quote */
 .mod-part.say-this blockquote{
   margin:0; padding:16px 20px;
   background:var(--purple-soft);
@@ -553,7 +567,7 @@ footer{
 }
 .mod-part.say-this blockquote + blockquote{ margin-top:12px; }
 
-/* Research spotlight — callout */
+/* Research spotlight, callout */
 .mod-part.spotlight{
   background:var(--grad-feature);
   border-radius:var(--radius-sm);
@@ -592,7 +606,7 @@ footer{
   margin-top:32px; padding-top:24px; border-top:1px solid var(--line-dark);
 }
 
-/* Before You Teach — advisory note */
+/* Before You Teach, advisory note */
 .mod-part.before-teach{
   background:rgba(117,173,201,0.16);
   border-left:3px solid var(--secondary);
@@ -602,14 +616,14 @@ footer{
 .mod-part.before-teach .mod-part-label{ color:var(--primary-dark); }
 .mod-part.before-teach p{ margin-bottom:0; }
 
-/* Say this — direct-instruction lead line (reuse say-this block for lessons) */
+/* Say this, direct-instruction lead line (reuse say-this block for lessons) */
 .mod-part .say-line{
   margin:0 0 12px; padding:14px 18px;
   background:var(--purple-soft); border-left:3px solid var(--primary);
   border-radius:var(--radius-sm); color:var(--ink); font-style:italic; line-height:1.6;
 }
 
-/* Handout Text — take-home block */
+/* Handout Text, take-home block */
 .mod-part.handout{ margin-top:24px; }
 .mod-part.handout .handout-body{
   background:var(--paper-dim);
@@ -620,8 +634,15 @@ footer{
 .mod-part.handout .handout-body p{ color:var(--ink); margin-bottom:10px; }
 .mod-part.handout .handout-body p:last-child{ margin-bottom:0; }
 
-/* lesson pills become openers */
-.lesson-pill{ cursor:pointer; transition:transform .12s ease, border-color .2s, background .2s; }
+/* lesson pills are native <button> openers (reset button chrome) */
+.lesson-pill{
+  cursor:pointer;
+  font-family:var(--font-body); font-size:0.78rem; font-weight:600;
+  line-height:1.3; text-align:left;
+  -webkit-appearance:none; appearance:none;
+  touch-action:manipulation;
+  transition:transform .12s ease, border-color .2s, background .2s;
+}
 .lesson-pill:hover{ transform:translateY(-1px); border-color:var(--cta); }
 .lesson-pill:focus-visible{ outline:2px solid var(--primary); outline-offset:2px; }
 .lesson-pill .pill-arrow{ opacity:0.7; margin-left:5px; }

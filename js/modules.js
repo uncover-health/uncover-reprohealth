@@ -1,10 +1,11 @@
 // Full-screen reader for Teacher training modules and grade-band lesson plans.
-// Any opener (.module-card or .lesson-pill) carries its structured content in a
-// <template>; we clone it into one shared overlay. Module cards show a number
-// badge; lesson pills show an eyebrow line (grade band + time). Esc, the close
-// button, or a click outside closes it.
+// Openers are native <button>s: .card-cover (over each module card) and
+// .lesson-pill. The structured content lives in a <template> on the module
+// card / inside the pill button; we clone it into one shared overlay. Module
+// cards show a number badge; lesson pills show an eyebrow line (grade band +
+// time). Esc, the close button, or a click outside closes it.
 document.addEventListener('DOMContentLoaded', () => {
-  const openers = document.querySelectorAll('.module-card, .lesson-pill');
+  const openers = document.querySelectorAll('.card-cover, .lesson-pill');
   if (!openers.length) return;
 
   const overlay = document.createElement('div');
@@ -34,8 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lastFocused = el;
     const badge = el.dataset.module || '';
     const eyebrow = el.dataset.eyebrow || '';
-    const heading = el.querySelector('h3');
-    const title = el.dataset.title || (heading ? heading.textContent : '');
+    const title = el.dataset.title || '';
 
     numEl.textContent = badge;
     numEl.hidden = !badge;
@@ -43,7 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     eyebrowEl.hidden = !eyebrow;
     titleEl.textContent = title;
 
-    const tpl = el.querySelector('template');
+    // Module cards keep their <template> on the parent article; lesson-pill
+    // buttons hold it directly.
+    const host = el.closest('.module-card') || el;
+    const tpl = host.querySelector('template');
     scrollEl.innerHTML = '';
     if (tpl) scrollEl.appendChild(tpl.content.cloneNode(true));
     scrollEl.scrollTop = 0;
@@ -59,12 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lastFocused) lastFocused.focus();
   }
 
-  openers.forEach(el => {
-    el.addEventListener('click', () => open(el));
-    el.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(el); }
-    });
-  });
+  // Native <button> openers dispatch click on tap, Enter, and Space on every
+  // device (including iPad in desktop mode, where a faux-button's first tap is
+  // eaten as hover). No manual keydown handling needed.
+  openers.forEach(el => el.addEventListener('click', () => open(el)));
 
   overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
   closeBtn.addEventListener('click', close);

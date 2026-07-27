@@ -1,4 +1,4 @@
-// "Match the symptom" — pick a condition for every symptom, then check all
+// "Match the symptom", pick a condition for every symptom, then check all
 // answers at once. Right or wrong, each pairing gets a short explanation.
 document.addEventListener('DOMContentLoaded', () => {
   const root = document.getElementById('match-game');
