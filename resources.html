@@ -4,24 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Resources, Uncover</title>
-<meta name="description" content="Medical and educational resources, school and community support services, and guidance on when to seek help.">
+<meta name="description" content="Canadian and international reproductive health organizations, Toronto hospitals and clinics that treat adolescents, and guidance on when to seek help.">
 <link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('uncover_theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
 </head>
 <body>
 
+<div class="orbs" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
 <nav class="nav">
   <div class="wrap">
-    <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+    <a href="index.html" class="brand">
+      <span class="logo">Uncover<span class="dot">.</span></span>
+      <span class="brand-tagline">Making invisible pain visible.</span>
+    </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="students.html">Students</a>
       <a href="teachers.html">Teachers</a>
-      <a href="parents.html">Parents</a>
+      <a href="parents.html">Family &amp; Friends</a>
+      <a href="advocacy.html">Self Advocacy Toolkit</a>
       <a href="stories.html">Stories</a>
-      <a href="learn.html">Learn</a>
       <a href="resources.html" class="active">Resources</a>
     </div>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false"><span class="t-icon">&#9790;</span></button>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
   </div>
 </nav>
 <div class="ombre-bar"></div>
@@ -30,97 +39,136 @@
 <div class="wrap">
   <div class="hero-tag"><span class="pip"></span> Resource directory</div>
   <h1>Trusted places to <em>go next.</em></h1>
-  <p class="lede">This page doesn't replace a doctor, it points you toward organizations and people who can actually help, whether that's medical, educational, or emotional support.</p>
+  <p class="lede">This page doesn't replace a doctor, it points you toward organizations, hospitals, and people who can actually help, whether that's medical, educational, or emotional support.</p>
+  <div class="pill-row" style="margin-top:34px;">
+    <a href="#medical" class="pill">01 Medical &amp; educational</a>
+    <a href="#community" class="pill">02 School &amp; community</a>
+    <a href="#help" class="pill">03 When to seek help</a>
+    <a href="#providers" class="pill">Find care in Toronto</a>
+  </div>
 </div>
 </header>
 
 <div class="marquee">
   <div class="marquee-track">
-    <span>Medical Resources</span><span>School Support</span><span>Kids Help Phone</span><span>When To Seek Help</span><span>Trusted Organizations</span>
-    <span>Medical Resources</span><span>School Support</span><span>Kids Help Phone</span><span>When To Seek Help</span><span>Trusted Organizations</span>
+    <span>Canadian Resources</span><span>Hospitals &amp; Clinics</span><span>School Support</span><span>Kids Help Phone</span><span>When To Seek Help</span><span>Pelvic Health</span>
+    <span>Canadian Resources</span><span>Hospitals &amp; Clinics</span><span>School Support</span><span>Kids Help Phone</span><span>When To Seek Help</span><span>Pelvic Health</span>
   </div>
 </div>
 
+<!-- 01, MEDICAL & EDUCATIONAL -->
 <section class="section light" id="medical">
   <div class="wrap">
     <div class="section-head">
       <div>
         <span class="num">01</span>
-        <h2 style="margin-top:14px;">Medical & educational resources.</h2>
+        <h2 style="margin-top:14px;">Medical &amp; educational resources.</h2>
       </div>
-      <p class="lede">Reputable organizations with accurate, teen-friendly reproductive health information.</p>
+      <p class="lede">Reputable organizations with accurate, teen-friendly reproductive health information. Canadian organizations come first, since that's where most students using this site are getting care.</p>
     </div>
-    <div class="grid grid-2">
-      <a href="https://kidshealth.org" target="_blank" rel="noopener" class="card">
-        <div class="icon tint-sky">↗</div>
-        <h3>Nemours KidsHealth</h3>
-        <p>Plain-language health articles written for teens, reviewed by medical professionals.</p>
-        <span class="tag-link">kidshealth.org</span>
-      </a>
-      <a href="https://www.womenshealth.gov" target="_blank" rel="noopener" class="card">
-        <div class="icon tint-pink">↗</div>
-        <h3>Office on Women's Health</h3>
-        <p>U.S. government resource covering menstrual health, PCOS, endometriosis, and fibroids in detail.</p>
-        <span class="tag-link">womenshealth.gov</span>
+
+    <h3 style="margin-bottom:20px;">Canadian organizations &amp; hospitals</h3>
+    <div class="grid grid-3">
+      <a href="https://www.womenscollegehospital.ca" target="_blank" rel="noopener" class="card">
+        <div class="icon tint-pink">&#8599;</div>
+        <h3>Women's College Hospital</h3>
+        <p>One of Canada's leading women's health hospitals. Specialty programs include a Young Women's Gynecology Clinic, endometriosis care, pelvic pain, and heavy menstrual bleeding.</p>
+        <span class="tag-link">womenscollegehospital.ca</span>
       </a>
       <a href="https://www.sexandu.ca" target="_blank" rel="noopener" class="card">
-        <div class="icon tint-purple">↗</div>
+        <div class="icon tint-purple">&#8599;</div>
         <h3>SexAndU.ca</h3>
         <p>Canadian sexual health education resource from the Society of Obstetricians and Gynaecologists of Canada.</p>
         <span class="tag-link">sexandu.ca</span>
       </a>
+      <a href="https://www.actioncanadashr.org" target="_blank" rel="noopener" class="card">
+        <div class="icon tint-sky">&#8599;</div>
+        <h3>Action Canada for Sexual Health &amp; Rights</h3>
+        <p>Canadian sexual and reproductive health education, advocacy, and access resources.</p>
+        <span class="tag-link">actioncanadashr.org</span>
+      </a>
+      <a href="https://cancer.ca/en/treatments/side-effects/female-reproductive-system-problems" target="_blank" rel="noopener" class="card">
+        <div class="icon tint-lime">&#8599;</div>
+        <h3>Canadian Cancer Society</h3>
+        <p>Plain-language explanations of reproductive system problems, including how treatments and conditions can affect periods, fertility, and pelvic health.</p>
+        <span class="tag-link">cancer.ca</span>
+      </a>
+      <a href="https://ppt.on.ca" target="_blank" rel="noopener" class="card">
+        <div class="icon tint-orange">&#8599;</div>
+        <h3>Pediatricians of Ontario</h3>
+        <p>An Ontario paediatric resource for families looking for care for children and teens, including help finding a paediatrician.</p>
+        <span class="tag-link">ppt.on.ca</span>
+      </a>
+      <a href="https://kidshelpphone.ca" target="_blank" rel="noopener" class="card">
+        <div class="icon tint-sky">&#8599;</div>
+        <h3>Kids Help Phone</h3>
+        <p>Free, confidential support for young people in Canada, 24/7, by phone, text, or chat. No health card and no parent needed.</p>
+        <span class="tag-link">kidshelpphone.ca</span>
+      </a>
+    </div>
+
+    <h3 style="margin:52px 0 20px;">International organizations</h3>
+    <div class="grid grid-2">
+      <a href="https://kidshealth.org" target="_blank" rel="noopener" class="card">
+        <div class="icon tint-sky">&#8599;</div>
+        <h3>Nemours KidsHealth</h3>
+        <p>Plain-language health articles written for teens, reviewed by medical professionals. United States.</p>
+        <span class="tag-link">kidshealth.org</span>
+      </a>
+      <a href="https://www.womenshealth.gov" target="_blank" rel="noopener" class="card">
+        <div class="icon tint-pink">&#8599;</div>
+        <h3>Office on Women's Health</h3>
+        <p>U.S. government resource covering menstrual health, PCOS, endometriosis, and fibroids in detail.</p>
+        <span class="tag-link">womenshealth.gov</span>
+      </a>
       <a href="https://www.endofound.org" target="_blank" rel="noopener" class="card">
-        <div class="icon tint-lime">↗</div>
+        <div class="icon tint-lime">&#8599;</div>
         <h3>Endometriosis Foundation of America</h3>
-        <p>EndoFound's ENPOWR program builds teen- and school-facing endometriosis education, several tools on this site are adapted from their resources.</p>
+        <p>EndoFound's ENPOWR program builds teen- and school-facing endometriosis education, several tools on this site are adapted from their resources. United States.</p>
         <span class="tag-link">endofound.org</span>
       </a>
       <a href="https://www.acog.org" target="_blank" rel="noopener" class="card">
-        <div class="icon tint-lime">↗</div>
+        <div class="icon tint-purple">&#8599;</div>
         <h3>ACOG</h3>
         <p>The American College of Obstetricians and Gynecologists, clinical guidance written for patients.</p>
         <span class="tag-link">acog.org</span>
-      </a>
-      <a href="https://www.actioncanadashr.org" target="_blank" rel="noopener" class="card">
-        <div class="icon tint-sky">↗</div>
-        <h3>Action Canada for Sexual Health & Rights</h3>
-        <p>Canadian sexual and reproductive health education, advocacy, and access resources.</p>
-        <span class="tag-link">actioncanadashr.org</span>
       </a>
     </div>
   </div>
 </section>
 
+<!-- 02, SCHOOL & COMMUNITY -->
 <section class="section" id="community">
   <div class="wrap">
     <div class="section-head">
       <div>
         <span class="num">02</span>
-        <h2 style="margin-top:14px;">School & community support.</h2>
+        <h2 style="margin-top:14px;">School &amp; community support.</h2>
       </div>
       <p class="lede">You don't have to navigate this by yourself, these are people and services built to help.</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
-        <div class="icon tint-pink">🏫</div>
+        <div class="icon tint-pink">&#127979;</div>
         <h3>Your school nurse</h3>
         <p>Usually the fastest, most private person to talk to about symptoms during the school day. No appointment needed.</p>
       </div>
       <div class="card">
-        <div class="icon tint-purple">💬</div>
+        <div class="icon tint-purple">&#128172;</div>
         <h3>Your school counselor</h3>
         <p>For the emotional side of things, pain, stress, feeling dismissed, or just needing to talk it through.</p>
       </div>
       <div class="card">
-        <div class="icon tint-sky">☎</div>
+        <div class="icon tint-sky">&#9742;</div>
         <h3>Kids Help Phone</h3>
         <p>Free, confidential support for young people in Canada, 24/7, by phone, text, or chat.</p>
-        <p class="tag-link" style="margin-top:16px; color:var(--muted); font-weight:600;">1-800-668-6868 · text CONNECT to 686868</p>
+        <p class="tag-link" style="margin-top:16px; color:var(--muted); font-weight:600;">1-800-668-6868 &middot; text CONNECT to 686868</p>
       </div>
     </div>
   </div>
 </section>
 
+<!-- 03, WHEN TO SEEK HELP -->
 <section class="section light" id="help">
   <div class="wrap">
     <div class="section-head">
@@ -128,25 +176,134 @@
         <span class="num">03</span>
         <h2 style="margin-top:14px;">When to seek help, and how urgently.</h2>
       </div>
+      <p class="lede">Three levels, and what to do at each one. Tap the first card to see hospitals and clinics you can actually book with.</p>
     </div>
     <div class="grid grid-2">
-      <div class="card" style="border-color:var(--lime);">
-        <div class="icon tint-lime">📅</div>
+      <div class="card expand-card" style="border-color:var(--lime);">
+        <div class="icon tint-lime">&#128197;</div>
         <h3>Book a regular appointment if...</h3>
-        <p style="margin-top:14px;">Symptoms are uncomfortable but manageable, irregular cycles, ongoing cramps that respond to pain relief, or new skin/hair changes you're curious about.</p>
+        <p style="margin-top:14px;">Symptoms are uncomfortable but manageable, irregular cycles, ongoing cramps that respond to pain relief, or new skin or hair changes you're curious about.</p>
+        <span class="expand-open" data-open-text="See doctors and clinics you can book with &rarr;" data-close-text="Hide the clinic list &uarr;">See doctors and clinics you can book with &rarr;</span>
+        <button type="button" class="card-cover" data-reveal="#providers" aria-expanded="false" aria-controls="providers" aria-label="Show reproductive health providers you can book with"></button>
       </div>
       <div class="card" style="border-color:var(--orange);">
-        <div class="icon tint-orange">⏱</div>
+        <div class="icon tint-orange">&#9201;</div>
         <h3>Seek care soon if...</h3>
         <p style="margin-top:14px;">Pain is disrupting school or sleep, bleeding is unusually heavy or prolonged, or symptoms are getting worse over a few weeks.</p>
       </div>
     </div>
-    <div class="banner dark" style="margin-top:24px;">
+
+    <div class="reveal-panel" id="providers" hidden>
+      <div style="padding-top:34px;">
+        <span class="eyebrow">Find reproductive health care</span>
+        <h3 style="margin:12px 0 10px; font-size:clamp(1.6rem,3vw,2.2rem);">Looking for support?</h3>
+        <p class="lede" style="margin-bottom:12px;">If you're experiencing severe period pain, irregular periods, heavy bleeding, pelvic pain, or think you may have a reproductive health condition such as endometriosis, PMOS (formerly PCOS), adenomyosis, PMDD, or fibroids, you deserve to be heard.</p>
+        <p class="lede" style="margin-bottom:26px;">These hospitals and clinics provide specialized care for adolescents and young adults with reproductive health concerns.</p>
+
+        <div class="provider-list">
+          <details class="provider">
+            <summary>Women's College Hospital<span class="plus">+</span></summary>
+            <div class="provider-body">
+              <span class="provider-kind">Specialized hospital</span>
+              One of Canada's leading women's health hospitals.
+              <ul>
+                <li>Young Women's Gynecology Clinic (ages 17&ndash;25)</li>
+                <li>Endometriosis care</li>
+                <li>PMOS/PCOS management</li>
+                <li>Pelvic pain</li>
+                <li>Heavy menstrual bleeding</li>
+                <li>Fibroids</li>
+                <li>Ovarian cysts</li>
+                <li>Menstrual suppression</li>
+                <li>Birth control counselling</li>
+              </ul>
+              <p class="provider-note">A physician referral is required for most specialty clinics.</p>
+            </div>
+          </details>
+
+          <details class="provider">
+            <summary>The Hospital for Sick Children (SickKids), Pediatric &amp; Adolescent Gynecology<span class="plus">+</span></summary>
+            <div class="provider-body">
+              <span class="provider-kind">Specialized hospital</span>
+              Designed specifically for children and adolescents.
+              <ul>
+                <li>Severe menstrual pain</li>
+                <li>Pelvic pain</li>
+                <li>Endometriosis</li>
+                <li>Menstrual disorders</li>
+                <li>Ovarian cysts</li>
+                <li>Puberty concerns</li>
+                <li>Reproductive endocrine disorders</li>
+                <li>Adolescent sexual health</li>
+              </ul>
+              <p class="provider-note">A multidisciplinary team includes gynecologists, nurses, dietitians, and social workers.</p>
+            </div>
+          </details>
+
+          <details class="provider">
+            <summary>St. Michael's Hospital Gynecology Clinic<span class="plus">+</span></summary>
+            <div class="provider-body">
+              <span class="provider-kind">Specialized hospital</span>
+              Provides adolescent gynecology and pelvic health services.
+              <ul>
+                <li>Pelvic pain</li>
+                <li>Menstrual disorders</li>
+                <li>General gynecology</li>
+                <li>Social work support</li>
+                <li>Specialized pelvic health clinics</li>
+              </ul>
+              <p class="provider-note">Some physicians here have specialized training or clinical interests in minimally invasive gynecologic surgery and endometriosis.</p>
+            </div>
+          </details>
+
+          <details class="provider">
+            <summary>Planned Parenthood Toronto<span class="plus">+</span></summary>
+            <div class="provider-body">
+              <span class="provider-kind">Youth-friendly sexual &amp; reproductive health clinic</span>
+              Provides confidential youth-friendly care.
+              <ul>
+                <li>Birth control counselling</li>
+                <li>STI testing</li>
+                <li>Menstrual health support</li>
+                <li>Pregnancy testing</li>
+                <li>Referrals to gynecologists</li>
+                <li>Sexual health education</li>
+              </ul>
+              <p class="provider-note">Some services are available even without a health card.</p>
+            </div>
+          </details>
+
+          <details class="provider">
+            <summary>Advanced Pelvic Physiotherapy Centre<span class="plus">+</span></summary>
+            <div class="provider-body">
+              <span class="provider-kind">Pelvic pain &amp; pelvic floor therapy</span>
+              For some people living with endometriosis, adenomyosis, or chronic pelvic pain, pelvic floor physiotherapy can be an important part of treatment. This clinic provides specialized pelvic floor assessment and rehabilitation for chronic pelvic pain, endometriosis-related symptoms, bladder concerns, and other pelvic health conditions.
+            </div>
+          </details>
+
+          <details class="provider">
+            <summary>Proactive Pelvic Health Centre<span class="plus">+</span></summary>
+            <div class="provider-body">
+              <span class="provider-kind">Pelvic pain &amp; pelvic floor therapy</span>
+              Specialized pelvic floor assessment and rehabilitation for chronic pelvic pain, endometriosis-related symptoms, bladder concerns, and other pelvic health conditions.
+            </div>
+          </details>
+        </div>
+
+        <div class="anon-note" style="margin-top:26px;">
+          <span>&#9432;</span>
+          <span><strong>A note for students.</strong> If you feel your pain or concerns are being dismissed, it's okay to seek a second opinion. Severe period pain, ongoing pelvic pain, heavy bleeding, or symptoms that interfere with school, sports, sleep, or daily life deserve medical attention. You know your body best, and your concerns should be taken seriously.</span>
+        </div>
+        <p class="form-note" style="margin-top:14px;">Clinic programs and referral requirements change. Call ahead or check the hospital's own website before you book.</p>
+      </div>
+    </div>
+
+    <div class="banner dark" style="margin-top:34px;">
       <div>
         <span class="eyebrow" style="color:var(--lime);">Emergency</span>
         <h2 style="margin-top:14px; color:#fff; font-size:clamp(1.6rem,3vw,2.2rem);">If pain is sudden, severe, and unlike anything before, or you're fainting, vomiting, or bleeding through more than a pad an hour, treat it as an emergency.</h2>
       </div>
-      <a href="tel:911" class="btn btn-primary">Call 911 <span class="btn-arrow">→</span></a>
+      <a href="tel:911" class="btn btn-primary">Call 911 <span class="btn-arrow">&rarr;</span></a>
     </div>
   </div>
 </section>
@@ -154,26 +311,29 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <div class="foot-col" style="max-width:280px;">
-        <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+      <div class="foot-col" style="max-width:300px;">
+        <a href="index.html" class="brand">
+          <span class="logo">Uncover<span class="dot">.</span></span>
+          <span class="brand-tagline">Making invisible pain visible.</span>
+        </a>
         <p class="muted" style="margin-top:16px; font-size:0.9rem;">A student-built reproductive health education project. Not a substitute for medical advice.</p>
       </div>
       <div class="foot-col">
-        <h4>Learn</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="students.html">Student Hub</a></li>
-          <li><a href="teachers.html">Teacher Hub</a></li>
-          <li><a href="learn.html">Interactive Tools</a></li>
-          <li><a href="advocacy.html">Self-Advocacy</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="teachers.html">Teachers</a></li>
+          <li><a href="parents.html">Family &amp; Friends</a></li>
+          <li><a href="advocacy.html">Self Advocacy Toolkit</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Community</h4>
+        <h4>Students</h4>
         <ul>
-          <li><a href="stories.html">Stories</a></li>
-          <li><a href="stories.html#share">Share your story</a></li>
-          <li><a href="students.html#ask">Ask a question</a></li>
-          <li><a href="parents.html">Parent & Supporters</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="games.html">Games &amp; Quizzes</a></li>
+          <li><a href="stories.html">Real Stories</a></li>
+          <li><a href="learn.html#ask">Ask anonymously</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -181,13 +341,13 @@
         <ul>
           <li><a href="resources.html">Resource directory</a></li>
           <li><a href="resources.html#help">When to seek help</a></li>
-          <li><a href="research.html">Research & about</a></li>
+          <li><a href="research.html">Research &amp; sources</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom" style="flex-direction:column; align-items:flex-start; gap:10px;">
-      <span>© <span data-year></span> Uncover. Built for a healthier, more honest health class.</span>
-      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional.</span>
+      <span>&copy; <span data-year></span> Uncover. Making invisible pain visible.</span>
+      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional. This site does not store or share anything you submit, it is a static prototype.</span>
     </div>
   </div>
 </footer>
@@ -195,6 +355,8 @@
 <a href="#" class="exit-btn" data-quick-exit>Quick exit</a>
 
 <script src="js/main.js"></script>
+<script src="js/theme.js"></script>
 <script src="js/motion.js"></script>
+<script src="js/reveal.js"></script>
 </body>
 </html>

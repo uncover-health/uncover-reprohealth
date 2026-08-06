@@ -3,40 +3,52 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Uncover, Reproductive Health Education for Students & Teachers</title>
-<meta name="description" content="A youth-centered reproductive health education platform, symptom guides, real stories, teacher training, and tools for students, educators, and families.">
+<title>Uncover, Making invisible pain visible</title>
+<meta name="description" content="A trusted educational space helping students, educators, families, and communities better understand reproductive health, recognize symptoms earlier, and advocate with confidence.">
 <link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('uncover_theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
 </head>
 <body>
 
+<div class="orbs" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
 <nav class="nav">
   <div class="wrap">
-    <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+    <a href="index.html" class="brand">
+      <span class="logo">Uncover<span class="dot">.</span></span>
+      <span class="brand-tagline">Making invisible pain visible.</span>
+    </a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="students.html">Students</a>
       <a href="teachers.html">Teachers</a>
-      <a href="parents.html">Parents</a>
+      <a href="parents.html">Family &amp; Friends</a>
+      <a href="advocacy.html">Self Advocacy Toolkit</a>
       <a href="stories.html">Stories</a>
-      <a href="learn.html">Learn</a>
       <a href="resources.html">Resources</a>
     </div>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false"><span class="t-icon">&#9790;</span></button>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
   </div>
 </nav>
 <div class="ombre-bar"></div>
 
 <header class="hero">
 <div class="wrap">
-  <div class="hero-tag"><span class="pip"></span> Understanding reproductive health starts here</div>
-  <h1>Your body isn't a<br>mystery. <em>Silence</em> made it feel that way.</h1>
-  <p class="lede">Education should empower, not leave questions unanswered. Learn about reproductive health, understand common reproductive illnesses, hear real stories, build confidence advocating for your health, and access trusted resources designed for students, educators, parents, and supporters.</p>
+  <div class="hero-tag"><span class="pip"></span> Reproductive health education for students, teachers, and families</div>
+  <div class="hero-brand">
+    <h1>Uncover<span class="dot">.</span></h1>
+    <p class="hero-tagline">Making invisible pain visible.</p>
+  </div>
+  <p class="lede">A trusted educational space helping students, educators, families, and communities better understand reproductive health, recognize symptoms earlier, and advocate with confidence.</p>
   <div class="cta-row">
-    <a href="students.html" class="btn btn-primary">Explore Student Hub <span class="btn-arrow">→</span></a>
-    <a href="teachers.html" class="btn btn-outline">Teacher Learning Course <span class="btn-arrow">→</span></a>
+    <a href="students.html" class="btn btn-primary">Explore the Student Hub <span class="btn-arrow">&rarr;</span></a>
+    <a href="teachers.html" class="btn btn-outline">Teacher Learning Course <span class="btn-arrow">&rarr;</span></a>
   </div>
   <div class="badge-list">
-    <span class="badge"><span class="dot"></span> Anonymous & judgment-free</span>
+    <span class="badge"><span class="dot"></span> Anonymous &amp; judgment-free</span>
     <span class="badge"><span class="dot"></span> Built from real student testimonials</span>
     <span class="badge"><span class="dot"></span> Free for classrooms</span>
   </div>
@@ -50,51 +62,79 @@
   </div>
 </div>
 
-<!-- MEET THE RESEARCHER -->
-<section class="section">
-  <div class="wrap two-col">
-    <div>
-      <span class="eyebrow">01, Meet the researcher</span>
-      <h2 style="margin-top:14px;">About Elyse.</h2>
-      <blockquote style="margin:22px 0 0; padding:20px 22px; border-left:3px solid var(--cta); font-family:var(--font-display); font-style:italic; font-size:1.15rem; line-height:1.5;">
-        "I was 11 when I got my period. I started having bad period cramps that were causing me to be unable to go on with everyday activities, school. I felt like something was wrong with me."
-        <footer style="margin-top:10px; font-family:var(--font-body); font-style:normal; font-size:0.85rem; color:var(--muted);">Elyse, age 17, endometriosis</footer>
-      </blockquote>
-      <p class="lede" style="margin-top:22px;">Hi, I'm Elyse Fisher-Uriarte. I created this website as part of a Youth Participatory Action Research (YPAR) project through the Toronto District School Board's Black Student Summer Leadership Program.</p>
-      <p style="margin-top:16px; color:var(--muted);">Living with endometriosis inspired me to explore why reproductive illnesses are often misunderstood, under-researched, and overlooked, especially among teenagers and racialized communities. Through research, anonymous testimonies, and educational resource development, I hope this platform helps young people feel seen, informed, and empowered to advocate for their health.</p>
-      <a href="research.html" class="btn btn-outline" style="margin-top:26px;">Read the research <span class="btn-arrow">→</span></a>
+<!-- 01, MEET THE RESEARCHER -->
+<section class="section light" id="researcher">
+  <div class="wrap">
+    <div class="section-head" style="margin-bottom:44px;">
+      <div>
+        <span class="eyebrow">01, Meet the researcher</span>
+        <h2 style="margin-top:14px;">Hi, I'm Elyse.</h2>
+      </div>
     </div>
-    <div class="card">
-      <div class="icon tint-pink" style="font-size:1.4rem;">✦</div>
-      <h3>Vision</h3>
-      <p style="margin-top:12px;">A future where every young person understands their body, every educator feels confident teaching reproductive health, and every individual experiencing reproductive illness receives informed, compassionate, equitable care.</p>
+    <div class="researcher">
+      <figure class="researcher-photo" style="margin:0;">
+        <img src="assets/elyse.jpg" alt="Elyse Fisher-Uriarte at her graduation, wearing a cap and gown and holding two bouquets of flowers." width="856" height="1300">
+        <figcaption>Elyse Fisher-Uriarte, founder of Uncover</figcaption>
+      </figure>
+      <div class="researcher-body">
+        <p>Living with endometriosis has affected far more than just my physical health. it has taken a significant toll on my mental health as well. The pain, uncertainty, and feeling of not always being understood made me realize how isolating reproductive illnesses can be, especially for young people.</p>
+        <p>I created <strong>Uncover</strong> to help change that. My hope is to encourage teachers to learn more about reproductive illnesses, create classrooms where these topics can be discussed without stigma, and educate not only themselves but their students as well. Every student deserves to feel safe asking for help, supported when they're struggling, and believed when they speak up about their health.</p>
+        <p>Through research, anonymous stories, and educational resources, <strong>Uncover</strong> aims to raise awareness, break the silence surrounding reproductive health, and empower young people to advocate for themselves. No one should have to feel alone while navigating a reproductive illness, and every girl deserves access to understanding, support, and a safe space to be heard.</p>
+        <div class="cta-row" style="margin-top:28px;">
+          <a href="research.html" class="btn btn-outline">Read the research behind this project <span class="btn-arrow">&rarr;</span></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- WHY THIS EXISTS -->
-<section class="section light">
+<!-- 02, MISSION & VISION -->
+<section class="section" id="mission">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow">02, Breaking the silence</span>
-        <h2 style="margin-top:14px;">Why this website exists.</h2>
+        <span class="eyebrow">02, Mission &amp; vision</span>
+        <h2 style="margin-top:14px;">What this project is for.</h2>
+      </div>
+    </div>
+    <div class="grid grid-2">
+      <div class="card" style="padding:44px;">
+        <div class="icon tint-pink" style="font-size:1.4rem;">&#9670;</div>
+        <h3 style="font-size:1.8rem;">Mission</h3>
+        <p style="margin-top:12px;">To give students, teachers, and families plain-language reproductive health education, so that severe pain, heavy bleeding, and irregular cycles are recognized early and taken seriously, instead of dismissed for years.</p>
+      </div>
+      <div class="card" style="padding:44px;">
+        <div class="icon tint-sky" style="font-size:1.4rem;">&#10038;</div>
+        <h3 style="font-size:1.8rem;">Vision</h3>
+        <p style="margin-top:12px;">A future where every young person understands their body, every educator feels confident teaching reproductive health, and every individual experiencing reproductive illness receives informed, compassionate, equitable care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03, BREAKING THE SILENCE -->
+<section class="section light" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">03, Breaking the silence</span>
+        <h2 style="margin-top:14px;">Why this matters.</h2>
       </div>
       <p class="lede">For many young people, conversations about reproductive health are limited, uncomfortable, or overlooked. Symptoms like severe period pain, heavy bleeding, chronic fatigue, or irregular cycles are often dismissed as "normal," delaying diagnosis for conditions like endometriosis, PMOS, adenomyosis, and uterine fibroids. Inspired by youth-led research and lived experience, this platform exists so every young person feels informed, supported, and empowered to seek help when something doesn't feel right.</p>
     </div>
     <div class="grid grid-3">
       <div class="card">
-        <div class="icon tint-pink">◐</div>
+        <div class="icon tint-pink">&#9680;</div>
         <h3>Inconsistent</h3>
         <p>What you learn about your own body depends on your school, your teacher, and whether the topic gets skipped for time.</p>
       </div>
       <div class="card">
-        <div class="icon tint-orange">◑</div>
+        <div class="icon tint-orange">&#9681;</div>
         <h3>Incomplete</h3>
         <p>Many students say they never learned to tell "normal" period pain from symptoms that deserve a doctor's visit.</p>
       </div>
       <div class="card">
-        <div class="icon tint-sky">◒</div>
+        <div class="icon tint-sky">&#9682;</div>
         <h3>Not inclusive</h3>
         <p>Race, gender, and age all shape whether pain gets taken seriously, in the classroom and in the exam room.</p>
       </div>
@@ -102,12 +142,12 @@
   </div>
 </section>
 
-<!-- QUICK FACTS -->
-<section class="section">
+<!-- 04, WORTH KNOWING -->
+<section class="section" id="stats">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow">03, Why it matters</span>
+        <span class="eyebrow">04, Worth knowing</span>
         <h2 style="margin-top:14px;">A few facts worth knowing.</h2>
       </div>
     </div>
@@ -133,34 +173,8 @@
   </div>
 </section>
 
-<!-- CHOOSE YOUR PATH -->
-<section class="section light">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <span class="eyebrow">04, Choose your learning path</span>
-        <h2 style="margin-top:14px;">Start here.</h2>
-      </div>
-    </div>
-    <div class="grid grid-2">
-      <a href="students.html" class="card" style="padding:44px;">
-        <div class="icon tint-lime" style="font-size:1.6rem;">🎒</div>
-        <h3 style="font-size:1.8rem;">Student Hub</h3>
-        <p style="margin-top:12px;">Explore reproductive health through interactive lessons, quizzes, symptom guides, a pain tracker, and real stories.</p>
-        <span class="tag-link">Start learning <span class="btn-arrow">→</span></span>
-      </a>
-      <a href="teachers.html" class="card" style="padding:44px;">
-        <div class="icon tint-sky" style="font-size:1.6rem;">🧑‍🏫</div>
-        <h3 style="font-size:1.8rem;">Teacher Learning Course</h3>
-        <p style="margin-top:12px;">Build confidence teaching reproductive health with modules, classroom resources, discussion guides, and lesson plans.</p>
-        <span class="tag-link">Begin the course <span class="btn-arrow">→</span></span>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- WHAT YOU'LL FIND -->
-<section class="section">
+<!-- 05, WHAT YOU'LL FIND -->
+<section class="section light" id="what">
   <div class="wrap">
     <div class="section-head">
       <div>
@@ -169,81 +183,68 @@
       </div>
     </div>
     <div class="grid grid-3">
-      <a href="students.html" class="card">
-        <div class="icon tint-pink">📖</div>
+      <a href="learn.html" class="card">
+        <div class="icon tint-pink">&#128214;</div>
         <h3>Learn About Reproductive Health</h3>
         <p>Understand the reproductive system, menstrual health, hormones, and common reproductive illnesses.</p>
       </a>
-      <a href="students.html#symptoms" class="card">
-        <div class="icon tint-purple">🩺</div>
+      <a href="learn.html#normal" class="card">
+        <div class="icon tint-purple">&#129658;</div>
         <h3>Know the Signs</h3>
         <p>Recognize symptoms that may need medical attention, and learn when to seek support.</p>
       </a>
       <a href="stories.html" class="card">
-        <div class="icon tint-orange">💬</div>
+        <div class="icon tint-orange">&#128172;</div>
         <h3>Real Stories</h3>
         <p>Read anonymous lived experiences, and share your own story if you choose.</p>
       </a>
       <a href="advocacy.html" class="card">
-        <div class="icon tint-sky">🧰</div>
-        <h3>Self-Advocacy Toolkit</h3>
+        <div class="icon tint-sky">&#129520;</div>
+        <h3>Self Advocacy Toolkit</h3>
         <p>Symptom trackers, appointment planners, questions for your doctor, and tips for speaking up.</p>
       </a>
       <a href="parents.html" class="card">
-        <div class="icon tint-lime">👪</div>
-        <h3>Parent &amp; Supporter Resources</h3>
+        <div class="icon tint-lime">&#128106;</div>
+        <h3>Family &amp; Friends</h3>
         <p>Guidance for supporting a child, sibling, partner, or friend living with reproductive health concerns.</p>
       </a>
-      <a href="research.html" class="card">
-        <div class="icon tint-purple">🔎</div>
-        <h3>Research &amp; Resources</h3>
-        <p>The research, findings, and sources behind this project, plus trusted organizations and downloads.</p>
+      <a href="resources.html" class="card">
+        <div class="icon tint-purple">&#128269;</div>
+        <h3>Trusted Resources</h3>
+        <p>Canadian and international organizations, hospitals and clinics, and guidance on when to seek help.</p>
       </a>
     </div>
   </div>
 </section>
 
-<!-- STORIES -->
-<section class="section light">
+<!-- 06, CHOOSE YOUR LEARNING PATH -->
+<section class="section" id="start">
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="eyebrow">06, In their words</span>
-        <h2 style="margin-top:14px;">Stories we've collected.</h2>
+        <span class="eyebrow">06, Choose your learning path</span>
+        <h2 style="margin-top:14px;">Start here.</h2>
       </div>
-      <a href="stories.html" class="btn btn-outline">Read all stories <span class="btn-arrow">→</span></a>
     </div>
     <div class="grid grid-3">
-      <div class="card">
-        <p style="font-family:var(--font-display); font-size:1.15rem; font-style:italic; line-height:1.4;">"I was told it was 'just cramps' for four years before anyone mentioned endometriosis could be why I was missing school."</p>
-        <p class="tag-link" style="color:var(--muted); margin-top:20px;">Anonymous, age 17</p>
-      </div>
-      <div class="card">
-        <p style="font-family:var(--font-display); font-size:1.15rem; font-style:italic; line-height:1.4;">"No one taught us the difference between a normal period and one that needed a doctor. I didn't know I could even ask."</p>
-        <p class="tag-link" style="color:var(--muted); margin-top:20px;">Anonymous, age 15</p>
-      </div>
-      <div class="card">
-        <p style="font-family:var(--font-display); font-size:1.15rem; font-style:italic; line-height:1.4;">"Having a teacher who actually knew about PMOS changed how comfortable I felt asking questions in class."</p>
-        <p class="tag-link" style="color:var(--muted); margin-top:20px;">Anonymous, age 16</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- CTA -->
-<section class="section light">
-  <div class="wrap">
-    <div class="banner">
-      <div>
-        <span class="eyebrow" style="color:rgba(255,255,255,0.85);">07, You deserve to be heard</span>
-        <h2 style="margin-top:14px; color:#fff;">Together, we can build a future where reproductive health is understood, not ignored.</h2>
-      </div>
-      <div class="cta-row">
-        <a href="students.html" class="btn btn-dark">Student Hub <span class="btn-arrow">→</span></a>
-        <a href="stories.html" class="btn btn-dark">Real Stories <span class="btn-arrow">→</span></a>
-      </div>
+      <a href="students.html" class="card" style="padding:44px;">
+        <div class="icon tint-lime" style="font-size:1.6rem;">&#127890;</div>
+        <h3 style="font-size:1.7rem;">Student Hub</h3>
+        <p style="margin-top:12px;">Learn the conditions, play the games, read real stories, and build a toolkit for your next appointment.</p>
+        <span class="tag-link">Start learning <span class="btn-arrow">&rarr;</span></span>
+      </a>
+      <a href="teachers.html" class="card" style="padding:44px;">
+        <div class="icon tint-sky" style="font-size:1.6rem;">&#129489;</div>
+        <h3 style="font-size:1.7rem;">Teacher Learning Course</h3>
+        <p style="margin-top:12px;">Eight training modules, classroom resources, discussion guides, and lesson plans by grade band.</p>
+        <span class="tag-link">Begin the course <span class="btn-arrow">&rarr;</span></span>
+      </a>
+      <a href="parents.html" class="card" style="padding:44px;">
+        <div class="icon tint-pink" style="font-size:1.6rem;">&#128106;</div>
+        <h3 style="font-size:1.7rem;">Family &amp; Friends</h3>
+        <p style="margin-top:12px;">How to support someone you love without minimizing, panicking, or making it about you.</p>
+        <span class="tag-link">Learn how to help <span class="btn-arrow">&rarr;</span></span>
+      </a>
     </div>
   </div>
 </section>
@@ -251,26 +252,29 @@
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <div class="foot-col" style="max-width:280px;">
-        <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+      <div class="foot-col" style="max-width:300px;">
+        <a href="index.html" class="brand">
+          <span class="logo">Uncover<span class="dot">.</span></span>
+          <span class="brand-tagline">Making invisible pain visible.</span>
+        </a>
         <p class="muted" style="margin-top:16px; font-size:0.9rem;">A student-built reproductive health education project. Not a substitute for medical advice.</p>
       </div>
       <div class="foot-col">
-        <h4>Learn</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="students.html">Student Hub</a></li>
-          <li><a href="teachers.html">Teacher Hub</a></li>
-          <li><a href="learn.html">Interactive Tools</a></li>
-          <li><a href="advocacy.html">Self-Advocacy</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="teachers.html">Teachers</a></li>
+          <li><a href="parents.html">Family &amp; Friends</a></li>
+          <li><a href="advocacy.html">Self Advocacy Toolkit</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Community</h4>
+        <h4>Students</h4>
         <ul>
-          <li><a href="stories.html">Stories</a></li>
-          <li><a href="stories.html#share">Share your story</a></li>
-          <li><a href="students.html#ask">Ask a question</a></li>
-          <li><a href="parents.html">Parent & Supporters</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="games.html">Games &amp; Quizzes</a></li>
+          <li><a href="stories.html">Real Stories</a></li>
+          <li><a href="learn.html#ask">Ask anonymously</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -278,13 +282,13 @@
         <ul>
           <li><a href="resources.html">Resource directory</a></li>
           <li><a href="resources.html#help">When to seek help</a></li>
-          <li><a href="research.html">Research & about</a></li>
+          <li><a href="research.html">Research &amp; sources</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom" style="flex-direction:column; align-items:flex-start; gap:10px;">
-      <span>© <span data-year></span> Uncover. Built for a healthier, more honest health class.</span>
-      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional. This site does not store or share anything you submit, it's a static prototype.</span>
+      <span>&copy; <span data-year></span> Uncover. Making invisible pain visible.</span>
+      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional. This site does not store or share anything you submit, it is a static prototype.</span>
     </div>
   </div>
 </footer>
@@ -292,6 +296,7 @@
 <a href="#" class="exit-btn" data-quick-exit>Quick exit</a>
 
 <script src="js/main.js"></script>
+<script src="js/theme.js"></script>
 <script src="js/motion.js"></script>
 </body>
 </html>

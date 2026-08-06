@@ -3,78 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Self-Advocacy Toolkit, Uncover</title>
-<meta name="description" content="Symptom trackers, an appointment planner, questions to ask your doctor, and a medical terminology glossary.">
+<title>Self Advocacy Toolkit, Uncover</title>
+<meta name="description" content="Pain and period trackers, an appointment planner, questions to ask your doctor, school accommodations, and a medical terminology glossary.">
 <link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('uncover_theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');}catch(e){}</script>
 </head>
 <body>
 
+<div class="orbs" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+
 <nav class="nav">
   <div class="wrap">
-    <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+    <a href="index.html" class="brand">
+      <span class="logo">Uncover<span class="dot">.</span></span>
+      <span class="brand-tagline">Making invisible pain visible.</span>
+    </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="students.html">Students</a>
       <a href="teachers.html">Teachers</a>
-      <a href="parents.html">Parents</a>
+      <a href="parents.html">Family &amp; Friends</a>
+      <a href="advocacy.html" class="active">Self Advocacy Toolkit</a>
       <a href="stories.html">Stories</a>
-      <a href="learn.html">Learn</a>
       <a href="resources.html">Resources</a>
     </div>
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode" aria-pressed="false"><span class="t-icon">&#9790;</span></button>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
   </div>
 </nav>
 <div class="ombre-bar"></div>
 
 <header class="hero">
 <div class="wrap">
-  <div class="hero-tag"><span class="pip"></span> Self-advocacy toolkit</div>
+  <div class="hero-tag"><span class="pip"></span> Self advocacy toolkit</div>
   <h1>Speak up for <em>yourself,</em> with backup.</h1>
-  <p class="lede">Symptom trackers, an appointment planner, questions to ask your healthcare provider, and tips for speaking up about your health.</p>
+  <p class="lede">Trackers, an appointment planner, the questions to actually ask, and what to do when you're told it's nothing.</p>
   <div class="pill-row" style="margin-top:34px;">
-    <a href="#trackers" class="pill">Trackers</a>
-    <a href="#appointment" class="pill">Appointment planner</a>
-    <a href="#questions" class="pill">Questions to ask</a>
-    <a href="#school" class="pill">School accommodations</a>
-    <a href="#glossary" class="pill">Medical terms</a>
+    <a href="#trackers" class="pill">01 Track your pain</a>
+    <a href="#appointment" class="pill">02 Appointment planner</a>
+    <a href="#questions" class="pill">03 Questions to ask</a>
+    <a href="#school" class="pill">04 School accommodations</a>
+    <a href="#glossary" class="pill">05 Medical terminology</a>
+    <a href="#chronic" class="pill">06 Chronic pain</a>
   </div>
 </div>
 </header>
 
 <div class="marquee">
   <div class="marquee-track">
-    <span>Symptom Tracker</span><span>Pain Diary</span><span>Appointment Planner</span><span>Questions to Ask</span><span>Medication Tracker</span><span>School Accommodations</span><span>Medical Terminology</span>
-    <span>Symptom Tracker</span><span>Pain Diary</span><span>Appointment Planner</span><span>Questions to Ask</span><span>Medication Tracker</span><span>School Accommodations</span><span>Medical Terminology</span>
+    <span>Pain Tracker</span><span>Period Trackers</span><span>Appointment Planner</span><span>Questions to Ask</span><span>School Accommodations</span><span>Medical Terminology</span><span>Chronic Pain</span>
+    <span>Pain Tracker</span><span>Period Trackers</span><span>Appointment Planner</span><span>Questions to Ask</span><span>School Accommodations</span><span>Medical Terminology</span><span>Chronic Pain</span>
   </div>
 </div>
 
-<!-- TRACKERS -->
+<!-- 01, TRACK YOUR PAIN -->
 <section class="section light" id="trackers">
   <div class="wrap">
     <div class="section-head">
       <div>
         <span class="num">01</span>
-        <h2 style="margin-top:14px;">Trackers.</h2>
+        <h2 style="margin-top:14px;">Track your pain, before your appointment.</h2>
       </div>
-      <p class="lede">The single most useful thing you can bring to an appointment is specifics, not a vague "it's been bad."</p>
+      <p class="lede">Doctors take specifics seriously. The single most useful thing you can bring to an appointment is a pattern, not a vague "it's been bad."</p>
     </div>
-    <div class="grid grid-2">
-      <a href="students.html#pain-tracker" class="card">
-        <div class="icon tint-pink">📍</div>
-        <h3>Pain tracker</h3>
-        <p>Map where it hurts, when, how it affects your day, and what helps, then copy a plain-text summary for your notes app.</p>
-        <span class="tag-link">Open the pain tracker <span class="btn-arrow">→</span></span>
-      </a>
-      <div class="card">
-        <div class="icon tint-purple">📅</div>
-        <h3>Period & medication tracker</h3>
-        <p>A dedicated app (or a plain calendar) works well: mark day one of your period, note duration, and log any medication you take and whether it helped. Bring the pattern, not just today's snapshot, to your appointment.</p>
+
+    <div class="quiz-card" style="max-width:840px; margin:0 auto;">
+      <h3>Where does it hurt, and when?</h3>
+      <p class="form-note" style="margin:10px 0 20px;">Check any that apply, an area can have more than one.</p>
+      <div style="overflow-x:auto;">
+        <table class="pain-map-table" id="pain-map">
+          <thead>
+            <tr><th>Area</th><th>During period</th><th>Other times</th><th>Constant</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Lower belly / pelvis</td><td><input type="checkbox" data-area="Lower belly/pelvis" data-when="during period"></td><td><input type="checkbox" data-area="Lower belly/pelvis" data-when="other times"></td><td><input type="checkbox" data-area="Lower belly/pelvis" data-when="constant"></td></tr>
+            <tr><td>Lower back</td><td><input type="checkbox" data-area="Lower back" data-when="during period"></td><td><input type="checkbox" data-area="Lower back" data-when="other times"></td><td><input type="checkbox" data-area="Lower back" data-when="constant"></td></tr>
+            <tr><td>Legs or thighs</td><td><input type="checkbox" data-area="Legs/thighs" data-when="during period"></td><td><input type="checkbox" data-area="Legs/thighs" data-when="other times"></td><td><input type="checkbox" data-area="Legs/thighs" data-when="constant"></td></tr>
+            <tr><td>Headaches</td><td><input type="checkbox" data-area="Headaches" data-when="during period"></td><td><input type="checkbox" data-area="Headaches" data-when="other times"></td><td><input type="checkbox" data-area="Headaches" data-when="constant"></td></tr>
+            <tr><td>During bowel movements or urination</td><td><input type="checkbox" data-area="Bowel movements/urination" data-when="during period"></td><td><input type="checkbox" data-area="Bowel movements/urination" data-when="other times"></td><td><input type="checkbox" data-area="Bowel movements/urination" data-when="constant"></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:32px;">How's it affecting your day?</h3>
+      <div class="checklist" id="pain-impact" style="margin-top:16px;">
+        <label class="check-row"><input type="checkbox" value="Missed school or activities"> Missed school or activities</label>
+        <label class="check-row"><input type="checkbox" value="Trouble concentrating or sleeping"> Trouble concentrating or sleeping</label>
+        <label class="check-row"><input type="checkbox" value="Needed to leave class or an event early"> Needed to leave class or an event early</label>
+        <label class="check-row"><input type="checkbox" value="Nausea, vomiting, or dizziness alongside the pain"> Nausea, vomiting, or dizziness alongside the pain</label>
+      </div>
+
+      <h3 style="margin-top:32px;">What helps, even a little?</h3>
+      <div class="checklist" id="pain-relief" style="margin-top:16px;">
+        <label class="check-row"><input type="checkbox" value="Heat (heating pad, warm bath)"> Heat (heating pad, warm bath)</label>
+        <label class="check-row"><input type="checkbox" value="Rest"> Rest</label>
+        <label class="check-row"><input type="checkbox" value="Over-the-counter pain medication"> Over-the-counter pain medication</label>
+        <label class="check-row"><input type="checkbox" value="Nothing has really helped yet"> Nothing has really helped yet</label>
+      </div>
+
+      <button class="btn btn-primary" id="pain-generate" style="margin-top:28px;">Build my summary <span class="btn-arrow">&rarr;</span></button>
+      <div class="score-result" id="pain-summary"></div>
+    </div>
+    <p class="form-note" style="text-align:center; margin-top:20px;">Nothing here is saved or sent anywhere, it only exists in this page until you close it. Format inspired by symptom-tracking guidance from the <a href="https://www.endofound.org" target="_blank" rel="noopener" style="text-decoration:underline;">Endometriosis Foundation of America</a>.</p>
+
+    <div class="divider"></div>
+
+    <h3 style="margin-bottom:8px;">Symptom awareness checklist.</h3>
+    <p class="lede" style="margin-bottom:26px;">Check anything that's applied to you in the last few months. You'll get a plain-language read on whether it's worth a conversation, not a diagnosis.</p>
+    <form class="card" id="score-checklist" style="max-width:840px; margin:0 auto;">
+      <div class="checklist">
+        <label class="check-row"><input type="checkbox"> Period pain that stops me from attending school</label>
+        <label class="check-row"><input type="checkbox"> Heavy bleeding</label>
+        <label class="check-row"><input type="checkbox"> Bleeding longer than 7 days</label>
+        <label class="check-row"><input type="checkbox"> Irregular or missing periods</label>
+        <label class="check-row"><input type="checkbox"> Pelvic pain between periods</label>
+        <label class="check-row"><input type="checkbox"> Pain during bowel movements</label>
+        <label class="check-row"><input type="checkbox"> Pain during urination during my period</label>
+        <label class="check-row"><input type="checkbox"> Acne that won't improve</label>
+        <label class="check-row"><input type="checkbox"> Excess facial or body hair</label>
+        <label class="check-row"><input type="checkbox"> Hair thinning</label>
+        <label class="check-row"><input type="checkbox"> Difficulty losing weight</label>
+        <label class="check-row"><input type="checkbox"> Constant fatigue</label>
+        <label class="check-row"><input type="checkbox"> Anxiety or low mood related to symptoms</label>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top:24px;">See what this means <span class="btn-arrow">&rarr;</span></button>
+      <div class="score-result" id="score-result"></div>
+    </form>
+
+    <div class="divider"></div>
+
+    <h3 style="margin-bottom:8px;" id="track-period">Track your period.</h3>
+    <p class="lede" style="margin-bottom:26px;">A tracker turns "I think it's been worse lately" into a pattern a doctor can actually read. These apps are all built for younger users. Age ranges are the ones each app suggests for itself.</p>
+    <div class="grid grid-3">
+      <div class="card app-card">
+        <span class="app-age">Ages 10&ndash;17</span>
+        <h3>Luna Period Tracker</h3>
+        <p>A straightforward period and symptom tracker aimed at younger teens. Log start and end dates, flow, cramps, and mood, and watch the pattern build over a few cycles.</p>
+      </div>
+      <div class="card app-card">
+        <span class="app-age">Ages 8&ndash;16</span>
+        <h3>Oky</h3>
+        <p>A period tracker created with and for girls by UNICEF. Plain-language explanations sit alongside the calendar, which makes it a good first tracker if you've only had a few periods.</p>
+      </div>
+      <div class="card app-card">
+        <span class="app-age">Ages 9&ndash;17</span>
+        <h3>Ove</h3>
+        <p>A teen-focused period app that pairs cycle tracking with short explainers about what's happening in your body that week, rather than just marking days on a calendar.</p>
+      </div>
+      <div class="card app-card">
+        <span class="app-age">Ages 12&ndash;19+</span>
+        <h3>Aavia</h3>
+        <p>Tracks symptoms across your whole cycle and connects them to hormone patterns. Useful if you're trying to show a provider that your symptoms cluster at the same point every month.</p>
+      </div>
+      <div class="card app-card">
+        <span class="app-age">Ages 8&ndash;19+</span>
+        <h3>Teena</h3>
+        <p>A guide-first app: period tracking plus answers to the questions people are often too embarrassed to ask out loud. Good if you want the explanations more than the calendar.</p>
+      </div>
+      <div class="card app-card" style="background:var(--grad-btn); color:var(--cta-ink); border-color:transparent;">
+        <div class="icon" style="background:rgba(61,20,114,0.14); color:var(--cta-ink);">&#9432;</div>
+        <h3 style="color:var(--cta-ink);">Before you download</h3>
+        <p style="color:var(--cta-ink); opacity:0.88;">Uncover isn't affiliated with any of these apps and gets nothing for listing them. Search the App Store or Google Play by name, read what the app does with your data, and remember that anything stored on your phone can be seen by whoever has your phone. A paper calendar counts as a tracker too.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- APPOINTMENT PLANNER -->
+<!-- 02, APPOINTMENT PLANNER -->
 <section class="section" id="appointment">
   <div class="wrap two-col">
     <div>
@@ -89,13 +186,13 @@
         <li class="check-row"><input type="checkbox" id="a3"><label for="a3">Dates: when symptoms started, and any pattern with your cycle</label></li>
         <li class="check-row"><input type="checkbox" id="a4"><label for="a4">A list of anything you've already tried, and whether it helped</label></li>
         <li class="check-row"><input type="checkbox" id="a5"><label for="a5">Family history of reproductive conditions, if you know it</label></li>
-        <li class="check-row"><input type="checkbox" id="a6"><label for="a6">Whether you want a parent/guardian in the room, or to be seen alone</label></li>
+        <li class="check-row"><input type="checkbox" id="a6"><label for="a6">Whether you want a parent or guardian in the room, or to be seen alone</label></li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- QUESTIONS TO ASK -->
+<!-- 03, QUESTIONS TO ASK -->
 <section class="section light" id="questions">
   <div class="wrap">
     <div class="section-head">
@@ -103,6 +200,7 @@
         <span class="num">03</span>
         <h2 style="margin-top:14px;">Questions to ask your doctor.</h2>
       </div>
+      <p class="lede">Say them out loud once before you go in. They're much easier to ask the second time.</p>
     </div>
     <div class="grid grid-2">
       <div class="card"><p>"What could be causing this, and how do we find out?"</p></div>
@@ -115,7 +213,7 @@
   </div>
 </section>
 
-<!-- SCHOOL ACCOMMODATIONS -->
+<!-- 04, SCHOOL ACCOMMODATIONS -->
 <section class="section" id="school">
   <div class="wrap two-col">
     <div>
@@ -136,7 +234,7 @@
   </div>
 </section>
 
-<!-- MEDICAL TERMINOLOGY -->
+<!-- 05, MEDICAL TERMINOLOGY -->
 <section class="section light" id="glossary">
   <div class="wrap">
     <div class="section-head">
@@ -175,29 +273,77 @@
   </div>
 </section>
 
+<!-- 06, CHRONIC PAIN -->
+<section class="section" id="chronic">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <span class="num">06</span>
+        <h2 style="margin-top:14px;">Chronic pain affects more than your body.</h2>
+      </div>
+      <p class="lede">Living with unexplained pain, or waiting years for a diagnosis, takes a toll. You may experience anxiety, depression, stress, isolation, or fatigue, that's real, and support for it matters too.</p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="icon tint-purple">&#129504;</div>
+        <h3>You're allowed to be frustrated</h3>
+        <p>Feeling dismissed by doctors, teachers, or even friends is exhausting. That frustration is a reasonable response, not an overreaction.</p>
+      </div>
+      <div class="card">
+        <div class="icon tint-pink">&#128155;</div>
+        <h3>Coping isn't fixing</h3>
+        <p>Heat, rest, movement, and talking to someone you trust won't cure a condition, but they can make hard days more bearable while you get answers.</p>
+      </div>
+      <div class="card">
+        <div class="icon tint-sky">&#128483;</div>
+        <h3>Find your person</h3>
+        <p>A school counselor, nurse, trusted teacher, or older sibling, pick one person to loop in so you're not carrying this alone.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:44px; margin-bottom:18px;">Healthy coping strategies</h3>
+    <ul class="pill-row">
+      <li class="pill">Talking with someone you trust</li>
+      <li class="pill">Joining a support group</li>
+      <li class="pill">Gentle exercise</li>
+      <li class="pill">Journaling</li>
+      <li class="pill">Mindfulness</li>
+      <li class="pill">Counselling</li>
+      <li class="pill">Getting enough sleep</li>
+    </ul>
+
+    <div class="cta-row" style="margin-top:36px;">
+      <a href="resources.html#help" class="btn btn-primary">When to seek help, and how urgently <span class="btn-arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
 <footer>
   <div class="wrap">
     <div class="foot-top">
-      <div class="foot-col" style="max-width:280px;">
-        <a href="index.html" class="logo">Uncover<span class="dot">.</span></a>
+      <div class="foot-col" style="max-width:300px;">
+        <a href="index.html" class="brand">
+          <span class="logo">Uncover<span class="dot">.</span></span>
+          <span class="brand-tagline">Making invisible pain visible.</span>
+        </a>
         <p class="muted" style="margin-top:16px; font-size:0.9rem;">A student-built reproductive health education project. Not a substitute for medical advice.</p>
       </div>
       <div class="foot-col">
-        <h4>Learn</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="students.html">Student Hub</a></li>
-          <li><a href="teachers.html">Teacher Hub</a></li>
-          <li><a href="learn.html">Interactive Tools</a></li>
-          <li><a href="advocacy.html">Self-Advocacy</a></li>
+          <li><a href="students.html">Students</a></li>
+          <li><a href="teachers.html">Teachers</a></li>
+          <li><a href="parents.html">Family &amp; Friends</a></li>
+          <li><a href="advocacy.html">Self Advocacy Toolkit</a></li>
         </ul>
       </div>
       <div class="foot-col">
-        <h4>Community</h4>
+        <h4>Students</h4>
         <ul>
-          <li><a href="stories.html">Stories</a></li>
-          <li><a href="stories.html#share">Share your story</a></li>
-          <li><a href="students.html#ask">Ask a question</a></li>
-          <li><a href="parents.html">Parent & Supporters</a></li>
+          <li><a href="learn.html">Learn</a></li>
+          <li><a href="games.html">Games &amp; Quizzes</a></li>
+          <li><a href="stories.html">Real Stories</a></li>
+          <li><a href="learn.html#ask">Ask anonymously</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -205,13 +351,13 @@
         <ul>
           <li><a href="resources.html">Resource directory</a></li>
           <li><a href="resources.html#help">When to seek help</a></li>
-          <li><a href="research.html">Research & about</a></li>
+          <li><a href="research.html">Research &amp; sources</a></li>
         </ul>
       </div>
     </div>
     <div class="foot-bottom" style="flex-direction:column; align-items:flex-start; gap:10px;">
-      <span>© <span data-year></span> Uncover. Built for a healthier, more honest health class.</span>
-      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional.</span>
+      <span>&copy; <span data-year></span> Uncover. Making invisible pain visible.</span>
+      <span>The information on this website is for educational purposes only and is not a substitute for medical advice, diagnosis, or treatment. If you are experiencing concerning symptoms, please consult a qualified healthcare professional. This site does not store or share anything you submit, it is a static prototype.</span>
     </div>
   </div>
 </footer>
@@ -219,6 +365,9 @@
 <a href="#" class="exit-btn" data-quick-exit>Quick exit</a>
 
 <script src="js/main.js"></script>
+<script src="js/theme.js"></script>
 <script src="js/motion.js"></script>
+<script src="js/paintracker.js"></script>
+<script src="js/checklist.js"></script>
 </body>
 </html>
